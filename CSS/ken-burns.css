@@ -1,0 +1,45 @@
+﻿ .kenburns {
+
+  overflow: hidden;
+
+  display: inline-block;
+
+}
+
+  @keyframes ken-burns {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+        transform: scale3d(1.5, 1.5, 1.5) translate3d(-20px, -50px, 0px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(2, 2, 2) translate3d(-10px, -50px, 0px);
+        opacity: 0;
+    }
+}
+
+.kenburns img {
+
+  animation: ken-burns 20s infinite;
+
+}
+
+.kenburns img:before {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: inherit;
+  content: ' ';
+}
+
+.kenburns img:hover {
+     background-color: rgb(128, 128, 128);
+ animation-play-state:paused;
+ 
+
+}
